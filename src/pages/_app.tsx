@@ -1,7 +1,6 @@
 import React from "react"
 import { type AppType } from "next/app"
 
-// eslint-disable-next-line import/no-unresolved
 import { trpc } from "../utils/trpc"
 
 import "../styles/globals.css"

@@ -16,7 +16,12 @@ parserOptions:
  sourceType: module
 globals:
  JSX: true
-settings: { react: { version: detect } }
+settings:
+ {
+  react: { version: detect },
+  "import/resolver":
+   { "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] } },
+ }
 plugins:
  - react
  - "@typescript-eslint"

@@ -1,7 +1,6 @@
 import React from "react"
 import { type NextPage } from "next"
 import Head from "next/head"
-// eslint-disable-next-line import/no-unresolved
 import NavBar from "../Components/NavBar"
 
 const Home: NextPage = () => (
