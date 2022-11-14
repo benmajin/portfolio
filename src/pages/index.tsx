@@ -6,6 +6,7 @@ import Header from "../Components/Header"
 import Projects from "../Components/Projects"
 import AboutMe from "../Components/AboutMe"
 import Skills from "../Components/Skills"
+import Footer from "../Components/Footer"
 
 const Home: NextPage = () => (
 	<>
@@ -20,6 +21,7 @@ const Home: NextPage = () => (
 		<AboutMe />
 		<Projects />
 		<Skills />
+		<Footer />
 	</>
 )
 
