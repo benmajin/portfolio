@@ -5,6 +5,7 @@ import NavBar from "../Components/NavBar"
 import Header from "../Components/Header"
 import Projects from "../Components/Projects"
 import AboutMe from "../Components/AboutMe"
+import Skills from "../Components/Skills"
 
 const Home: NextPage = () => (
 	<>
@@ -18,6 +19,7 @@ const Home: NextPage = () => (
 		<Header />
 		<AboutMe />
 		<Projects />
+		<Skills />
 	</>
 )
 

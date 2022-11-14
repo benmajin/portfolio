@@ -1,10 +1,17 @@
-import React, { forwardRef } from "react"
+import React from "react"
+import SectionContainer from "./Container"
+import SectionTitle from "./SectionTitle"
+import Separator from "./Separator"
 
-// eslint-disable-next-line react/display-name
-const Projects = forwardRef<HTMLDivElement, unknown>((props, ref) => (
-	<div className="min-h-screen" id="portfolio" ref={ref}>
-		Projects
-	</div>
-))
+const Projects = () => (
+	<section className="bg-darkBlueLight">
+		<SectionContainer>
+			<div className="flex flex-col items-center space-y-8 text-center">
+				<SectionTitle>Projets</SectionTitle>
+				<Separator />
+			</div>
+		</SectionContainer>
+	</section>
+)
 
 export default Projects
