@@ -7,6 +7,7 @@ import Projects from "../Components/Projects"
 import AboutMe from "../Components/AboutMe"
 import Skills from "../Components/Skills"
 import Footer from "../Components/Footer"
+import Contact from "../Components/Contact"
 
 const Home: NextPage = () => (
 	<>
@@ -21,6 +22,7 @@ const Home: NextPage = () => (
 		<AboutMe />
 		<Projects />
 		<Skills />
+		<Contact />
 		<Footer />
 	</>
 )
