@@ -1,4 +1,5 @@
 import React from "react"
+import ContactForm from "./ContactForm"
 import SectionContainer from "./Container"
 import SectionText from "./SectionText"
 import SectionTitle from "./SectionTitle"
@@ -17,59 +18,7 @@ const Contact = () => (
 				</SectionText>
 				<Separator />
 			</div>
-			<form className="w-full max-w-screen-sm">
-				<div className="mb-4 w-full">
-					<label
-						htmlFor="name"
-						className="mb-2 block text-sm font-medium text-mainWhite">
-						Votre nom et prénom
-					</label>
-					<input
-						type="text"
-						id="name"
-						className="block w-full rounded-lg border border-darkBlue bg-green-50 p-2.5 text-sm text-darkBlue placeholder-darkBlueLight/70 focus:border-green-500 "
-						placeholder="Antoine Dupont"
-					/>
-				</div>
-				<div className="mb-4 w-full">
-					<label
-						htmlFor="email"
-						className="mb-2 block text-sm font-medium text-mainWhite">
-						Votre email
-					</label>
-					<input
-						type="email"
-						id="email"
-						className="block w-full rounded-lg border border-darkBlue bg-green-50 p-2.5 text-sm text-darkBlue placeholder-darkBlueLight/70 focus:border-green-500 "
-						placeholder="johndoe@gmail.com"
-					/>
-				</div>
-				<div className="mb-4 w-1/2">
-					<label
-						htmlFor="object"
-						className="mb-2 block text-sm font-medium text-mainWhite">
-						Objet
-					</label>
-					<input
-						type="text"
-						id="object"
-						className="block w-full rounded-lg border border-darkBlue bg-green-50 p-2.5 text-sm text-darkBlue placeholder-darkBlueLight/70 focus:border-green-500 "
-						placeholder="Objet..."
-					/>
-				</div>
-				<div className="mb-4">
-					<label
-						htmlFor="message"
-						className="mb-2 block text-sm font-medium text-mainWhite">
-						Message
-					</label>
-					<textarea
-						id="message"
-						className="block w-full rounded-lg border border-darkBlue bg-green-50 p-2.5 text-sm text-darkBlue placeholder-darkBlueLight/70 focus:border-green-500 "
-						placeholder=""
-					/>
-				</div>
-			</form>
+			<ContactForm />
 		</SectionContainer>
 	</section>
 )
