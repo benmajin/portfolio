@@ -1,5 +1,6 @@
 import React from "react"
 import SectionContainer from "./Container"
+import ProjectsCards from "./ProjectsCards"
 import SectionTitle from "./SectionTitle"
 import Separator from "./Separator"
 
@@ -10,6 +11,7 @@ const Projects = () => (
 				<SectionTitle>Projets</SectionTitle>
 				<Separator />
 			</div>
+			<ProjectsCards />
 		</SectionContainer>
 	</section>
 )
