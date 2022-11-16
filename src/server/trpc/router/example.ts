@@ -21,7 +21,5 @@ export const publicRouter = router({
 					message: "An unexpected error occurred, please try again later.",
 				})
 			}
-
-			console.log("t'es pas un robot frere")
 		}),
 })
