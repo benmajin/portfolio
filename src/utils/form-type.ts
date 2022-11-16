@@ -13,3 +13,7 @@ export const FormSchema = z.object({
 })
 
 export type TForm = z.infer<typeof FormSchema>
+
+const token = z.object({ captchaToken: z.string().min(1) })
+
+export const FormTokenSchema = FormSchema.merge(token)

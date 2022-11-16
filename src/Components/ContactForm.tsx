@@ -4,20 +4,31 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { FormSchema, TForm } from "../utils/form-type"
 import ErrorMessage from "./ErrorMessage"
 import clsx from "clsx"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import { trpc } from "../utils/trpc"
 
 const ContactForm = () => {
+	const { executeRecaptcha } = useGoogleReCaptcha()
 	const {
 		register,
 		formState: { errors },
 		handleSubmit,
 	} = useForm<TForm>({ resolver: zodResolver(FormSchema) })
 
-	const { data } = trpc.example.hello.useQuery()
-	console.log(data?.greeting)
+	const { mutate } = trpc.public.sendMessage.useMutation()
 
-	const handleSubmitContact: SubmitHandler<TForm> = (data) => {
-		console.log(data)
+	const handleSubmitContact: SubmitHandler<TForm> = async (data) => {
+		if (!executeRecaptcha) {
+			return
+		}
+
+		const captchaToken = await executeRecaptcha("homepage")
+
+		if (!captchaToken) return
+
+		const messageData = { ...data, captchaToken }
+
+		mutate(messageData)
 	}
 
 	return (
