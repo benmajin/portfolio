@@ -8,6 +8,7 @@ import { z } from "zod"
 export const serverSchema = z.object({
 	NODE_ENV: z.enum(["development", "test", "production"]),
 	RECAPTCHA_SECRET_KEY: z.string(),
+	SENDGRID_API_KEY: z.string(),
 })
 
 /**

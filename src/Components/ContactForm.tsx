@@ -13,9 +13,12 @@ const ContactForm = () => {
 		register,
 		formState: { errors },
 		handleSubmit,
+		reset,
 	} = useForm<TForm>({ resolver: zodResolver(FormSchema) })
 
-	const { mutate } = trpc.public.sendMessage.useMutation()
+	const { mutate, isSuccess, isError } = trpc.public.sendMessage.useMutation({
+		onSuccess: () => reset(),
+	})
 
 	const handleSubmitContact: SubmitHandler<TForm> = async (data) => {
 		if (!executeRecaptcha) {
@@ -36,6 +39,15 @@ const ContactForm = () => {
 			className="w-full max-w-screen-sm"
 			onSubmit={handleSubmit(handleSubmitContact)}>
 			<div className="mb-4 w-full">
+				{isError && (
+					<ErrorMessage message="Une erreur est survenue, merci de réessayer plus tard" />
+				)}
+				{isSuccess && (
+					<p className="py-3 text-center text-lg text-green-600">
+						Merci de m'avoir contacter, une réponse vous sera apportée dans les plus
+						brefs délai.
+					</p>
+				)}
 				<label
 					htmlFor="name"
 					className="mb-2 block text-sm font-medium text-mainWhite">
@@ -111,7 +123,7 @@ const ContactForm = () => {
 			<button className="group relative inline-flex items-center justify-start overflow-hidden rounded-full bg-mainRed px-5 py-3 font-bold transition-all hover:bg-white disabled:cursor-not-allowed disabled:bg-gray-700">
 				<span className="absolute inset-0 rounded-full border-0 border-mainWhite transition-all duration-100 ease-linear group-hover:border-[25px] group-disabled:border-0"></span>
 				<span className="relative w-full text-left text-mainWhite transition-colors duration-200 ease-in-out group-hover:text-mainRed group-disabled:text-mainWhite">
-					Button Text
+					Envoyer le message
 				</span>
 			</button>
 		</form>
