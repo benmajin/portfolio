@@ -1,12 +1,12 @@
 import React from "react"
 import ContactForm from "./ContactForm"
-import SectionContainer from "./Container"
-import SectionText from "./SectionText"
-import SectionTitle from "./SectionTitle"
-import Separator from "./Separator"
+import SectionContainer from "./ui/Container"
+import SectionText from "./ui/SectionText"
+import SectionTitle from "./ui/SectionTitle"
+import Separator from "./ui/Separator"
 
 const Contact = () => (
-	<section className="bg-darkBlueLight">
+	<section className="bg-darkBlueLight" id="contact">
 		<SectionContainer>
 			<div className="flex flex-col items-center space-y-8 text-center">
 				<SectionTitle>Me contacter</SectionTitle>

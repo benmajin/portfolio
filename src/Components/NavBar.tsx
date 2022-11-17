@@ -1,10 +1,10 @@
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
 import LogoSmall from "../Assets/images/logo_small.png"
-import BurgerIcon from "./BurgerIcon"
-import MobileMenu from "./MobileMenu"
-import NavLink from "./NavLink"
-import NavLinks from "./NavLinks"
+import BurgerIcon from "./ui/BurgerIcon"
+import MobileMenu from "./ui/MobileMenu"
+import NavLink from "./ui/NavLink"
+import NavLinks from "./ui/NavLinks"
 import { useWindowSize } from "usehooks-ts"
 
 const NavBar = () => {
@@ -28,9 +28,15 @@ const NavBar = () => {
 				{isOpen && <MobileMenu />}
 
 				<NavLinks>
-					<NavLink>Accueil</NavLink>
-					<NavLink>Portfolio</NavLink>
-					<NavLink>Contact</NavLink>
+					<a href="/">
+						<NavLink>Accueil</NavLink>
+					</a>
+					<a href="#projets">
+						<NavLink>Projets</NavLink>
+					</a>
+					<a href="#contact">
+						<NavLink>Contact</NavLink>
+					</a>
 				</NavLinks>
 			</div>
 		</nav>

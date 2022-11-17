@@ -5,15 +5,15 @@ import githubIcon from "../Assets/images/githubIcon.png"
 import Image from "next/image"
 import Link from "next/link"
 import Typewriter from "typewriter-effect"
-import MainButton from "./MainButton"
+import MainLink from "./ui/MainLink"
 
 const Header = () => (
 	<header className="flex min-h-[calc(100vh_-_111px)] flex-col items-center justify-between bg-darkBlueLight py-10">
 		<div className="flex space-x-6">
-			<Link href="#">
+			<Link href="https://www.linkedin.com/in/benjamin-voissiere-96a31b129">
 				<Image src={LinkdinIcon.src} height={80} width={80} alt="linkdin logo" />
 			</Link>
-			<Link href="#">
+			<Link href="https://github.com/benmajin">
 				<Image src={githubIcon.src} height={80} width={80} alt="github logo" />
 			</Link>
 		</div>
@@ -32,7 +32,7 @@ const Header = () => (
 				/>
 			</div>
 		</div>
-		<MainButton />
+		<MainLink destination="#projets" label="Projets" />
 	</header>
 )
 

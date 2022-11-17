@@ -1,5 +1,5 @@
 import React from "react"
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "./ui/ProjectCard"
 import { projects } from "../utils/projects"
 
 const ProjectsCards = () => (

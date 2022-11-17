@@ -1,10 +1,10 @@
 import React from "react"
-import SectionTitle from "./SectionTitle"
-import Separator from "./Separator"
+import SectionTitle from "./ui/SectionTitle"
+import Separator from "./ui/Separator"
 import reactImage from "../Assets/images/react-1.png"
-import AboutMeInfo from "./AboutMeInfo"
-import SectionText from "./SectionText"
-import SectionContainer from "./Container"
+import AboutMeInfo from "./ui/AboutMeInfo"
+import SectionText from "./ui/SectionText"
+import SectionContainer from "./ui/Container"
 
 const AboutMe = () => (
 	<section className=" bg-darkBlue py-10">

@@ -6,7 +6,7 @@ import Header from "../Components/Header"
 import Projects from "../Components/Projects"
 import AboutMe from "../Components/AboutMe"
 import Skills from "../Components/Skills"
-import Footer from "../Components/Footer"
+import Footer from "../Components/ui/Footer"
 import Contact from "../Components/Contact"
 
 const Home: NextPage = () => (

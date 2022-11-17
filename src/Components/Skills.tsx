@@ -1,8 +1,8 @@
 import React from "react"
-import SectionContainer from "./Container"
-import SectionText from "./SectionText"
-import SectionTitle from "./SectionTitle"
-import Separator from "./Separator"
+import SectionContainer from "./ui/Container"
+import SectionText from "./ui/SectionText"
+import SectionTitle from "./ui/SectionTitle"
+import Separator from "./ui/Separator"
 import SkillCards from "./SkillCards"
 
 const Skills = () => (
